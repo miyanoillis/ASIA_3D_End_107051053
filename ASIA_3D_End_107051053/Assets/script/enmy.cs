@@ -24,6 +24,8 @@ public class enmy : MonoBehaviour
     [Header("ATK"), Range(0f, 5f)]
     public float atk = 5;
     public float hp = 10;
+    public bool a = false;
+
 
     private void OnDrawGizmos()
     {
@@ -44,11 +46,15 @@ public class enmy : MonoBehaviour
 
     public void Update()
     {
+        if(a == true)
+        {
             track();
         if(pal.hp >0)
         {
             attack();
         }
+        }
+
     }
 
 
